@@ -1,0 +1,22 @@
+﻿{
+  "BackgroundImageAbsolutePath": "D:\\我的文件\\图片\\PT\\4.png",
+  "BackgroundImagesDirectoryAbsolutePath": "c:\\users\\刘忠祥\\appdata\\local\\microsoft\\visualstudio\\16.0_e826b7e0\\extensions\\bme4l4j0.2j2\\Images",
+  "ExpandToIDE": false,
+  "Extensions": ".png, .jpg, .gif, .bmp",
+  "ImageBackgroundType": 0,
+  "ImageFadeAnimationInterval": "PT0S",
+  "ImageStretch": 3,
+  "IsLimitToMainlyEditorWindow": false,
+  "LoopSlideshow": false,
+  "MaxHeight": 0,
+  "MaxWidth": 0,
+  "Opacity": 0.5,
+  "PositionHorizon": 1,
+  "PositionVertical": 1,
+  "ShuffleSlideshow": false,
+  "SoftEdgeX": 0,
+  "SoftEdgeY": 0,
+  "UpdateImageInterval": "PT1M",
+  "ViewBoxPointX": 0,
+  "ViewBoxPointY": 0
+}

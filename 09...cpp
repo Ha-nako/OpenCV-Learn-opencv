@@ -1,0 +1,182 @@
+#include<opencv2\core\core.hpp>
+#include<opencv2\highgui\highgui.hpp>
+#include<opencv2\imgproc\imgproc.hpp>
+#include<iostream>
+#include<opencv2/imgcodecs.hpp>
+#include<opencv2/highgui.hpp>
+#include<opencv2/imgproc.hpp>
+#include <thread>
+#include <string>
+#include <vector>
+#include <opencv2/imgproc/imgproc.hpp>  
+
+using namespace cv;
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+	//-----
+
+
+
+
+
+	string path = "D://pp//yy.png";
+	Mat img = imread(path);	//读文件
+	Mat imggray, imgblur, imgCanny, imgDil;	//定义图像变量
+
+
+	cvtColor(img, imggray, COLOR_BGR2GRAY);
+	//↑转化灰度图像:1转化为2,模式为3（灰度）
+	imshow("灰度", imggray);
+	imwrite("D://桌面//3636.png", imggray);
+
+
+	GaussianBlur(img, imgblur, Size(7, 7), 5, 0);
+	//↑高斯模糊:size(定义内核大小7*7),输出屏幕上的位置偏移->5,0(x,y)
+
+	Canny(imgblur, imgCanny, 30, 100);
+	//↑坎尼边沿检测	  两个检测阈值(可更改,值越小边缘越多)
+
+
+	namedWindow("原图", WINDOW_FREERATIO);
+	namedWindow("坎尼边沿检测", WINDOW_FREERATIO);
+
+	imshow("原图", img);
+	imshow("坎尼边沿检测", imgCanny);
+
+	Mat kernel = getStructuringElement(MORPH_RECT, Size(2, 2));
+	//↑定义可使用膨胀(扩充/侵蚀)的内核  (数越小,扩充越多,只能用奇数)
+	dilate(imgCanny, imgDil, kernel);
+	//↑	边缘扩充
+	imshow("边缘扩充", imgDil);
+
+	std::vector<Vec3f> circles;//存储每个圆的位置信息
+		//霍夫圆
+	HoughCircles(imgCanny, circles, CV_HOUGH_GRADIENT, 1.8, 10, 20, 53, 18, 26);
+	//																		
+	for (size_t i = 0; i < circles.size(); i++)
+	{
+		Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+		int radius = cvRound(circles[i][2]);
+
+		//绘制圆轮廓  
+		circle(img, center, radius, Scalar(155, 50, 255), 3, 8, 0);
+		int R = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[2];//R
+		int G = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[1];//G
+		int B = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[0];//B
+		std::cout << "圆的半径是" << radius << std::endl;
+		std::cout << "圆的X是" << circles[i][0] << "圆的Y是" << circles[i][1] << std::endl;
+		
+		
+		
+		//Point center(circles[i][0], circles[i][1]);
+		//int radius = 200;
+
+		circle(img, center, radius, Scalar(0, 200, 100), 2, 8, 0);
+
+		for (int x = 0; x < circles[i][0]; x++)
+		{
+			for (int y = 0; y < circles[i][1]; y++)
+			{
+				int temp = ((x - center.x) * (x - center.x) + (y - center.y) * (y - center.y));
+				if (temp < (radius * radius))
+				{
+					img.at<Vec3b>(Point(x, y))[0] = img.at<Vec3b>(Point(x, y))[0];
+					img.at<Vec3b>(Point(x, y))[1] = img.at<Vec3b>(Point(x, y))[1];
+					img.at<Vec3b>(Point(x, y))[2] = img.at<Vec3b>(Point(x, y))[2];
+				}
+				else
+				{
+					img.at<Vec3b>(Point(x, y))[0] = img.at<Vec3b>(Point(x, y))[0];
+					img.at<Vec3b>(Point(x, y))[1] = img.at<Vec3b>(Point(x, y))[1];
+					img.at<Vec3b>(Point(x, y))[2] = img.at<Vec3b>(Point(x, y))[2];
+				}
+			}
+		}
+
+		imshow("image1", img);
+		imshow("image2", img);
+
+		while (uchar(waitKey() != 'q')) {}
+		return 0;
+	}
+
+
+
+
+
+
+	
+
+}
+
+
+
+
+
+//#include<opencv2/imgcodecs.hpp>
+//#include<opencv2/highgui.hpp>
+//#include<opencv2/imgproc.hpp>
+//#include<iostream>
+//#include <thread>
+//#include <string>
+//#include <vector>
+//#include <opencv2/imgproc/imgproc.hpp>  
+//
+//using namespace cv;
+//using namespace std;
+//
+//void main() {
+//
+//	string path = "D://pp//yy.png";
+//	Mat img = imread(path);	//读文件
+//	Mat imggray, imgblur, imgCanny, imgDil;	//定义图像变量
+//
+//
+//	cvtColor(img, imggray, COLOR_BGR2GRAY);
+//	//↑转化灰度图像:1转化为2,模式为3（灰度）
+//	imshow("灰度", imggray);
+//
+//
+//	GaussianBlur(img, imgblur, Size(7, 7), 5, 0);
+//	//↑高斯模糊:size(定义内核大小7*7),输出屏幕上的位置偏移->5,0(x,y)
+//
+//	Canny(imgblur, imgCanny, 30, 100);
+//	//↑坎尼边沿检测	  两个检测阈值(可更改,值越小边缘越多)
+//
+//
+//	namedWindow("原图", WINDOW_FREERATIO);
+//	namedWindow("坎尼边沿检测", WINDOW_FREERATIO);
+//
+//	imshow("原图", img);
+//	imshow("坎尼边沿检测", imgCanny);
+//
+//	Mat kernel = getStructuringElement(MORPH_RECT, Size(2, 2));
+//	//↑定义可使用膨胀(扩充/侵蚀)的内核  (数越小,扩充越多,只能用奇数)
+//	dilate(imgCanny, imgDil, kernel);
+//	//↑	边缘扩充
+//	imshow("边缘扩充", imgDil);
+//
+//	std::vector<Vec3f> circles;//存储每个圆的位置信息
+//		//霍夫圆
+//	HoughCircles(imgCanny, circles, CV_HOUGH_GRADIENT, 1.8, 10, 20, 53, 18, 26);
+//	//																		
+//	for (size_t i = 0; i < circles.size(); i++)
+//	{
+//		Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+//		int radius = cvRound(circles[i][2]);
+//
+//		//绘制圆轮廓  
+//		circle(img, center, radius, Scalar(155, 50, 255), 3, 8, 0);
+//		int R = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[2];//R
+//		int G = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[1];//G
+//		int B = img.at<Vec3b>(cvRound(circles[i][1]), cvRound(circles[i][0]))[0];//B
+//		std::cout << "圆的半径是" << radius << std::endl;
+//		std::cout << "圆的X是" << circles[i][0] << "圆的Y是" << circles[i][1] << std::endl;
+//	}
+//
+//	imshow("【效果图】", img);
+//
+//	waitKey(0);		//延迟显示
+//}

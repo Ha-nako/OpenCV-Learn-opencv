@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\其他">
+      <UniqueIdentifier>{8d63a5ae-4557-402a-bf07-6fc50cb9db08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\1-8">
+      <UniqueIdentifier>{ff66667e-af0e-443f-bd8b-d7e471b37bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\New project">
+      <UniqueIdentifier>{945b63dd-c44b-47af-9d4c-a03a2819eab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Project 1">
+      <UniqueIdentifier>{3069918d-c49c-4aee-a6fa-32f87641476f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Project 2">
+      <UniqueIdentifier>{76ac28d8-9198-4816-9c23-f34071cd3081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\检测圆形">
+      <UniqueIdentifier>{f7f4b6f9-65b4-4c5f-ac06-0b957b031f49}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="图片显示.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="捕捉视频灰色.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="杂.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="练习.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="8.2_检测视频面部.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="1.1_图片显示.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="1.2_本地视频.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="1.3_网络摄像头.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1_灰度.模糊.边缘.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="2.2_扩充侵蚀图像%28边缘%29.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="3.1_图像大小调整.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="3.2_图像剪裁.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="4.1_绘制形状.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="5.1_翘曲图像.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="6.1_图像颜色检测%28跟踪栏%29.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="7.1_图像轮廓检测（）.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="8.1_检测图像面部.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="1.1_虚拟画家 （）.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="1.0_颜色选择器★.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="7.2_轮廓检测 （）.cpp">
+      <Filter>源文件\1-8</Filter>
+    </ClCompile>
+    <ClCompile Include="1.2_虚拟画家.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1_文档扫描仪 （）.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="2.2_文档扫描仪.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="2.3_文档扫描仪 %28video ×%29.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="3.1_车牌检测、裁切、保存.cpp">
+      <Filter>源文件\New project</Filter>
+    </ClCompile>
+    <ClCompile Include="练习1.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="人脸01.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="2_检测.cpp">
+      <Filter>源文件\Project 1</Filter>
+    </ClCompile>
+    <ClCompile Include="Hough圆检测.cpp">
+      <Filter>源文件\Project 2</Filter>
+    </ClCompile>
+    <ClCompile Include="01.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="02_A1.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="02_A2.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="03.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="04_画圆AAA.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="05_分类.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="06_类1.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="07.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="08_灰度.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="09...cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_1_分类AAA.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_2_分类.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_3(方差均值).cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_3%28方差法分类%29.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_4.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="01_排序.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_5_KNN_A.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_5_KNN_采样本.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_5_Knn备份.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="10_6_打印.cpp">
+      <Filter>源文件\检测圆形</Filter>
+    </ClCompile>
+    <ClCompile Include="模板匹配.cpp">
+      <Filter>源文件\Project 2</Filter>
+    </ClCompile>
+    <ClCompile Include="源.cpp">
+      <Filter>源文件\其他</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
